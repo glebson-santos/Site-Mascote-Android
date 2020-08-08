@@ -7,6 +7,7 @@
     src: url(fontes/idroid.utf);
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +24,7 @@
     --cor2: #83E1AD;
     --cor3: #3DDC84;
     --cor4: #2FA866;
-    --cor5: #1f7a48;
+    --cor5: #1b7042;
     --cor6: #0a4b2e;
     --cor7: black;
     --font1: Idroid, Helvetica, sans-serif;;
@@ -39,43 +40,77 @@ body {
 header {
     background-image: linear-gradient(to left, var(--cor4), var(--cor5));
     color: var(--cor0);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
-
 }
 
 header h1 {
     font-family: var(--font2);
     font-weight: lighter;
     padding: 20px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.486); 
+}
+
+header a {
+    color: white;   
+}
+
+header nav {
+    align-self: flex-start;
+    display: flex;
+    text-align: center;
+    margin: 20px;
+    background-color: var(--cor4);
+    border-radius: 5px; 
+}
+
+header li {
+    padding: 5px 10px;
+    border-left: 1px solid var(--cor5);
+    transition-duration: .5s;
+    cursor: pointer;
+    
+}
+
+header li:hover {
+    background-color: var(--cor6);
+}
+
+header li:first-child {
+    border-left: none;
+    border-radius: 5px 0 0 5px;
+}
+
+header li:last-child {
+    border-radius: 0px 5px 5px 0;
 }
 
 header ul {
     display: flex;
 }
 
-header li {
-    margin-bottom: 15px;
-}
-
-header a {
-    color: var(--cor0);
-    padding: 15px;
-}
-
-
-header a:hover {
-    background-color: var(--cor5);
-    transition-duration: .7s;
-    font-size: 17px;
+@media(max-width: 700px) {
+    header nav {
+        
+        align-self: center;
+    }
 }
 
 /*---------------------Main--------------------------*/
 
 main {
-    margin: 0 auto;
+    margin: auto;
     width: 960px;
     background-color: var(--cor0);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.301);
     border-radius: 0 0 10px 10px;
+    position: relative;
+    top:2px
 }
+
+main h2 {
+   font-family: var(--font1);
+}
+
