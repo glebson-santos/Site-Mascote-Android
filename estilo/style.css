@@ -197,6 +197,11 @@ footer {
     margin-top: 20px;
 }
 
+footer a {
+    color: var(--cor0);
+    font-weight: bold;
+}
+
 /*-----------Mobile--------------*/
 
 @media(max-width: 700px) {
@@ -263,6 +268,10 @@ footer {
         border-radius: 0;
         padding-bottom: 5px;
      }
+
+    main h2 {
+        text-align: center;
+    }
 
     aside ul{
         columns: 1;
